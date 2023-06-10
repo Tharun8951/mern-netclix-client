@@ -3,13 +3,14 @@ import './FavoritesPages.scss'
 import axios from 'axios'
 import FavoritePageMovie from './FavoritePageMovie '
 import Header from '../Header/Header'
+import { URL } from '../../App'
 
 function FavoritePage() {
   const [favMovies, setFavMovies] = useState([])
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/getmovies')
+      .get(`${URL}/api/getmovies`)
       .then((res) => {
         setFavMovies(res.data.data)
       })

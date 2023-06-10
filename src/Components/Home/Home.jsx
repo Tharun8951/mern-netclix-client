@@ -5,6 +5,8 @@ import { BiPlay } from 'react-icons/bi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom'
 import Header from '../Header/Header'
+import { api_key } from '../../App'
+
 
 const apiKey = '0d0383928004a61902a15af68a3741ae'
 const url = 'https://api.themoviedb.org/3/movie'

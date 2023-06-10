@@ -7,6 +7,9 @@ import FavoritePage from './Components/FavoritePage/FavoritePage'
 import LoginPage from './Components/Authentication/LoginPage'
 import SignupPage from './Components/Authentication/SignupPage'
 
+
+export const URL = process.env.REACT_APP_SERVER_URL
+
 function App() {
   return (
     <>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './authentication.scss'
+import { URL } from '../../App'
 
 
 export default function LoginPage() {
@@ -17,7 +18,7 @@ export default function LoginPage() {
 
   const handleLogin = async(e) => {
     e.preventDefault()
-    const response = await fetch('http://localhost:8080/users/loginuser', {
+    const response = await fetch(`${URL}/users/loginuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { AiOutlinePlus } from 'react-icons/ai'
 import axios from 'axios'
 import Header from '../Header/Header'
+import { URL } from '../../App'
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 
 const CardDeatails = () => {
@@ -21,7 +22,7 @@ const CardDeatails = () => {
       img: `${imgUrl}/${data.backdrop_path}`
     }
     axios
-      .post('http://localhost:8080/api/addmovie', dataToSend)
+      .post(`${URL}/api/addmovie`, dataToSend)
       .then((res) => {
         if(res.data.success === true){
           alert('added to favorites successfully')
