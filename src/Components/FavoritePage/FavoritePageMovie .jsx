@@ -16,7 +16,8 @@ export default function FavoritePageMovie({
     const idToDelete = { id }
     try {
       await axios
-        .post(`${URL}/api/deletemovie`, idToDelete)
+        // .post(`${URL}/api/deletemovie`, idToDelete)
+        .post(`/api/deletemovie`, idToDelete)
         .then((res) => {
           setFavMovies(prevFavMovies => prevFavMovies.filter(movie => movie._id !== id));
         })
