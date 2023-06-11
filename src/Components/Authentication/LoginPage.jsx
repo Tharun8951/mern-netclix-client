@@ -19,7 +19,8 @@ export default function LoginPage() {
   const handleLogin = async(e) => {
     e.preventDefault()
     // const response = await fetch(`${URL}/users/loginuser`, {
-    const response = await fetch(`/users/loginuser`, {
+    // const response = await fetch(`/users/loginuser`, {
+    const response = await fetch(`https://mern-netclix-server.vercel.app/users/loginuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

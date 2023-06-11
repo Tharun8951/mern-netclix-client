@@ -17,7 +17,7 @@ export default function SignupPage() {
     e.preventDefault()
     // const response = await fetch('http://localhost:8080/users/createuser', {
     // const response = await fetch(`${URL}/users/createuser`, {
-    const response = await fetch(`/users/createuser`, {
+    const response = await fetch(`https://mern-netclix-server.vercel.app/users/createuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

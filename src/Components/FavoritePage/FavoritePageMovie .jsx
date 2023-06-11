@@ -17,7 +17,7 @@ export default function FavoritePageMovie({
     try {
       await axios
         // .post(`${URL}/api/deletemovie`, idToDelete)
-        .post(`/api/deletemovie`, idToDelete)
+        .post(`https://mern-netclix-server.vercel.app/api/deletemovie`, idToDelete)
         .then((res) => {
           setFavMovies(prevFavMovies => prevFavMovies.filter(movie => movie._id !== id));
         })
